@@ -1,3 +1,4 @@
+import { AiFillHome } from "react-icons/ai"; 
 import { FaUserFriends } from "react-icons/fa";
 import { FiUsers } from "react-icons/fi";
 import { Link } from "react-router-dom";
@@ -52,6 +53,12 @@ export default function Sidebar() {
             <NavLink id="menu-3" to="/customers" className={menuClass}>
               <FaUserFriends className="mr-4 text-xl" />
               Customers
+            </NavLink>
+          </li>
+          <li>
+            <NavLink id="menu-3" to="/home" className={menuClass}>
+              <AiFillHome className="mr-4 text-xl" />
+              Home
             </NavLink>
           </li>
         </ul>
