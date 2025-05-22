@@ -1,0 +1,38 @@
+[
+  {
+    "author": {
+      "fullName": "Akshay Kumar",
+      "picture": "https://cdn.easyfrontend.com/pictures/users/user20.jpg",
+      "designation": "Founder / CEO"
+    },
+    "rating": 3.5,
+    "description": "Assumenda non repellendus distinctio nihil dicta sapiente, quibusdam maiores, illum at, aliquid blanditiis eligendi qui."
+  },
+  {
+    "author": {
+      "fullName": "Raima Sen",
+      "picture": "https://cdn.easyfrontend.com/pictures/users/user15.jpg",
+      "designation": "Content Marketing"
+    },
+    "rating": 4,
+    "description": "Made darkness life. Fifth him there own grass divided you you're beast. Tree subdue a open cattle. Unto spirit winged."
+  },
+  {
+    "author": {
+      "fullName": "Arjun Kapur",
+      "picture": "https://cdn.easyfrontend.com/pictures/users/user22.jpg",
+      "designation": "Digital Strategy"
+    },
+    "rating": 5,
+    "description": "Gathered let winged be above upon. The to sea shall man, tree female said fish of sixth night subdue said."
+  },
+  {
+    "author": {
+      "fullName": "Deepika Padukone",
+      "picture": "https://cdn.easyfrontend.com/pictures/users/user1.jpg",
+      "designation": "Digital Strategy"
+    },
+    "rating": 5,
+    "description": "His make fly said divided yielding creeping years his. Have over. Also you'll after great image subdue forth likeness."
+  }
+]

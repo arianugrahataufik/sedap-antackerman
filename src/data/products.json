@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "Nasi Goreng Spesial",
+    "price": 25000,
+    "image": "https://i.pinimg.com/736x/94/73/04/947304a4c2cab06b20236f676b7f9f01.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Ayam Crispy",
+    "price": 22000,
+    "image": "https://i.pinimg.com/736x/fd/48/6f/fd486f0f2080f7536d5f84c24c9e4e91.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Burger",
+    "price": 30000,
+    "image": "https://i.pinimg.com/736x/85/9a/de/859adef90e854238d9b330d0c7d2cf73.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Kebab Abud's",
+    "price": 30000,
+    "image": "https://i.pinimg.com/736x/14/fd/b1/14fdb1127c5b833bf8018cf60e138579.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Ice Cream",
+    "price": 30000,
+    "image": "https://i.pinimg.com/736x/db/06/a4/db06a4f2039fde63f6b770e6e1b47d89.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Mie Bangladesh",
+    "price": 30000,
+    "image": "https://i.pinimg.com/736x/7b/9b/32/7b9b32cc3d2bb6c8211678f85ca61b50.jpg"
+  }
+]
