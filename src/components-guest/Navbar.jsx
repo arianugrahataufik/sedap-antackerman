@@ -34,6 +34,9 @@ export default function Navbar() {
         <NavLink to="/about" className={menuClass}>
           About
         </NavLink>
+        <NavLink to="/" className={menuClass}>
+          Dashboard
+        </NavLink>
       </div>
       {/* Search Bar */}
       <div id="search-bar" className="relative  max-w-lg">
