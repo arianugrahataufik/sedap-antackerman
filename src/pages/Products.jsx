@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import PageHeader from "../components/PageHeader";
 import axios from "axios";
 import { BsFillExclamationDiamondFill } from "react-icons/bs";
+import { Link } from "react-router-dom";
 // import products from "../data/product-sedap.json"
 
 export default function Products() {
@@ -12,7 +13,6 @@ export default function Products() {
   const [query, setQuery] = useState("");
 
   useEffect(() => {
-
     const timeout = setTimeout(() => {
       axios
         .get(`https://dummyjson.com/products/search?q=${query}`) // menerapkan search dan query param
@@ -72,7 +72,14 @@ export default function Products() {
               <td className="px-6 py-4 font-medium text-gray-700">
                 {index + 1}.
               </td>
-              <td className="px-6 py-4">{item.title}</td>
+              <td className="px-6 py-4">
+                <Link
+                  to={`/products/${item.id}`}
+                  className="text-black hover:text-emerald-500"
+                >
+                  {item.title}
+                </Link>
+              </td>
               <td className="px-6 py-4">{item.category}</td>
               <td className="px-6 py-4">Rp {item.price * 1000}</td>
               <td className="px-6 py-4">{item.brand}</td>

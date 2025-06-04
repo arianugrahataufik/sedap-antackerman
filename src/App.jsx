@@ -8,6 +8,7 @@ import Product from "./pages/guest/Product";
 import Testimonial from "./pages/guest/Testimonial";
 import CekMember from "./pages/CekMember";
 import Products from "./pages/Products";
+import ProductDetail from "./pages/ProductDetail";
 
 const MainLayout = React.lazy(() => import("./layouts/MainLayout"));
 const AuthLayout = React.lazy(() => import("./layouts/AuthLayout"));
@@ -37,6 +38,7 @@ function App() {
             <Route path="/orders" element={<Orders />} />
             <Route path="/customers" element={<Customers />} />
             <Route path="/products" element={<Products />} />
+            <Route path="/products/:id" element={<ProductDetail />} />
           </Route>
 
           <Route element={<AuthLayout />}>
