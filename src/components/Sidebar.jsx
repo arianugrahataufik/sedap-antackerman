@@ -4,7 +4,7 @@ import { FiUsers } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import { AiFillFile } from "react-icons/ai";
-import { MdDashboard } from "react-icons/md";
+import { MdDashboard, MdFastfood } from "react-icons/md";
 export default function Sidebar() {
   const menuClass = ({ isActive }) =>
     `flex cursor-pointer items-center rounded-xl p-4  space-x-2
@@ -53,6 +53,12 @@ export default function Sidebar() {
             <NavLink id="menu-3" to="/customers" className={menuClass}>
               <FaUserFriends className="mr-4 text-xl" />
               Customers
+            </NavLink>
+          </li>
+          <li>
+            <NavLink id="menu-3" to="/products" className={menuClass}>
+              <MdFastfood className="mr-4 text-xl" />
+              Products
             </NavLink>
           </li>
           <li>
