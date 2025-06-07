@@ -2,12 +2,12 @@ import { useEffect, useState } from "react";
 import PageHeader from "../components/PageHeader";
 import axios from "axios";
 import { BsFillExclamationDiamondFill } from "react-icons/bs";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 // import products from "../data/product-sedap.json"
 
 export default function Products() {
   const breadcrumb = ["Dashboard", "Product List"];
-
+  const navigate = useNavigate();
   const [products, setProducts] = useState([]);
   const [error, setError] = useState(null);
   const [query, setQuery] = useState("");
@@ -63,7 +63,7 @@ export default function Products() {
             <th className="px-4 py-3">Vendor</th>
           </tr>
         </thead>
-        <tbody className="bg-white divide-y divide-gray-100 text-sm text-gray-800">
+        {/* <tbody className="bg-white divide-y divide-gray-100 text-sm text-gray-800">
           {products.map((item, index) => (
             <tr
               key={item.id}
@@ -80,6 +80,23 @@ export default function Products() {
                   {item.title}
                 </Link>
               </td>
+              <td className="px-6 py-4">{item.category}</td>
+              <td className="px-6 py-4">Rp {item.price * 1000}</td>
+              <td className="px-6 py-4">{item.brand}</td>
+            </tr>
+          ))}
+        </tbody> */}
+        <tbody className="bg-white divide-y divide-gray-100 text-sm text-gray-800">
+          {products.map((item, index) => (
+            <tr
+              key={item.id}
+              className="hover:bg-gray-50 transition-colors duration-200 cursor-pointer"
+              onClick={() => navigate(`/products/${item.id}`)}
+            >
+              <td className="px-6 py-4 font-medium text-gray-700">
+                {index + 1}.
+              </td>
+              <td className="px-6 py-4">{item.title}</td>
               <td className="px-6 py-4">{item.category}</td>
               <td className="px-6 py-4">Rp {item.price * 1000}</td>
               <td className="px-6 py-4">{item.brand}</td>

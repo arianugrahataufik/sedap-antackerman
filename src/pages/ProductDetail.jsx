@@ -1,43 +1,52 @@
-import { useParams } from "react-router-dom"
-import { useEffect, useState } from "react"
-import axios from "axios"
+import { BiChevronLeft } from "react-icons/bi"; 
+import { useNavigate, useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 export default function ProductDetail() {
-    const { id } = useParams()
-    const [product, setProduct] = useState(null)
-    const [error, setError] = useState(null)
+  const { id } = useParams();
+  const navigate = useNavigate();
+  const [product, setProduct] = useState(null);
+  const [error, setError] = useState(null);
 
-    useEffect(() => {
-        axios
-            .get(`https://dummyjson.com/products/${id}`)
-            .then((response) => {
-                if (response.status !== 200) {
-                    setError(response.message)
-                    return
-                }
-                setProduct(response.data)
-            })
-            .catch((err) => {
-                setError(err.message)
-            })
-    }, [id])
+  useEffect(() => {
+    axios
+      .get(`https://dummyjson.com/products/${id}`)
+      .then((response) => {
+        if (response.status !== 200) {
+          setError(response.message);
+          return;
+        }
+        setProduct(response.data);
+      })
+      .catch((err) => {
+        setError(err.message);
+      });
+  }, [id]);
 
-    if (error) return <div className="text-red-600 p-4">{error}</div>
-    if (!product) return <div className="p-4">Loading...</div>
+  if (error) return <div className="text-red-600 p-4">{error}</div>;
+  if (!product) return <div className="p-4">Loading...</div>;
 
-    return (
-        <div className="p-6 bg-white rounded-xl shadow-lg max-w-lg mx-auto mt-6">
-            <img
-                src={product.thumbnail}
-                alt={product.title}
-                className="rounded-xl mb-4 w-full object-cover"
-            />
-            <h2 className="text-2xl font-bold mb-2">{product.title}</h2>
-            <p className="text-gray-600 mb-1">Kategori: {product.category}</p>
-            <p className="text-gray-600 mb-1">Brand: {product.brand}</p>
-            <p className="text-gray-800 font-semibold text-lg">
-                Harga: Rp {product.price * 1000}
-            </p>
-        </div>
-    )
+  return (
+    <div className="p-6 bg-white rounded-xl shadow-lg max-w-lg mx-auto mt-6">
+      <button
+        onClick={() => navigate(-1)}
+        className="mb-4 px-4 py-2 bg-emerald-600 text-white rounded hover:bg-emerald-700"
+      >
+        <BiChevronLeft />
+      </button>
+
+      <img
+        src={product.thumbnail}
+        alt={product.title}
+        className="rounded-xl mb-4 w-full object-cover"
+      />
+      <h2 className="text-2xl font-bold mb-2">{product.title}</h2>
+      <p className="text-gray-600 mb-1">Kategori: {product.category}</p>
+      <p className="text-gray-600 mb-1">Brand: {product.brand}</p>
+      <p className="text-gray-800 font-semibold text-lg">
+        Harga: Rp {product.price * 1000}
+      </p>
+    </div>
+  );
 }
