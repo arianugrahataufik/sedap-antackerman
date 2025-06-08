@@ -21,7 +21,7 @@ export default function ProductDetail() {
       })
       .catch((err) => {
         setError(err.message);
-      });
+      }); 
   }, [id]);
 
   if (error) return <div className="text-red-600 p-4">{error}</div>;

@@ -63,6 +63,7 @@ export default function Products() {
             <th className="px-4 py-3">Vendor</th>
           </tr>
         </thead>
+
         {/* <tbody className="bg-white divide-y divide-gray-100 text-sm text-gray-800">
           {products.map((item, index) => (
             <tr
@@ -86,6 +87,7 @@ export default function Products() {
             </tr>
           ))}
         </tbody> */}
+        
         <tbody className="bg-white divide-y divide-gray-100 text-sm text-gray-800">
           {products.map((item, index) => (
             <tr
