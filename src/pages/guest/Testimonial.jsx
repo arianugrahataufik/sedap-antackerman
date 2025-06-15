@@ -62,6 +62,7 @@ TestimonialItem.propTypes = {
 
 const Testimonial10 = () => {
   const [testimonialList, setTestimonialList] = useState([]);
+  
 
   useEffect(() => {
     fetch("/data/customer.json")
